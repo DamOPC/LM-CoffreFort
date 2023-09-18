@@ -17,7 +17,7 @@ bio = io.BytesIO()
 choix_client = st.selectbox("Choisir un code client", options=df['CODE Client'])
 date_cr = st.date_input("Selectionner la date d'edition du document")
 mois = st.text_input("Entrer le mois de mise en place du ")
-option = st.radio(["Option1", "Option2"))
+option = st.radio(["Option1", "Option2"])
 
 #Fonction de generation des variables
 def generate_var():
