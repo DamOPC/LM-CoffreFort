@@ -7,7 +7,7 @@ import openpyxl
 
 st.set_page_config(layout='wide')
 
-st.title('Génération automatique d\'AG')
+st.title('Génération automatique de Lettre de Mission Coffre Fort')
 
 df = pd.read_excel('AGAuto50.xlsx')
 bio = io.BytesIO()
@@ -15,11 +15,11 @@ bio = io.BytesIO()
 #Infos lettre mission
 choix_client = st.selectbox("Choisir un code client", options=df['CODE Client'])
 date_cr = st.date_input("Selectionner la date d'edition du document")
-mois = st.text_input("Entrer le mois de mise en place du ")
-option = st.radio("Option validée par le client", ["Oui", "Non"])
+mois = st.text_input("Entrer le mois de mise en place de la mission ")
+option = st.radio("Option validée par le client ?", ["Oui", "Non"])
 
 if option == 'Oui':
-    st.write("Option 1 validée sur la lettre de mission")
+    st.write("L\'Option 1 est validée sur la lettre de mission")
     doc = docx.Document('edoc_oui.docx')
 else:
     doc = docx.Document('edoc_non.docx')
