@@ -10,7 +10,6 @@ st.set_page_config(layout='wide')
 st.title('Génération automatique d\'AG')
 
 df = pd.read_excel('AGAuto50.xlsx')
-doc = docx.Document('edoc.docx')
 bio = io.BytesIO()
 
 #Infos lettre mission
@@ -18,6 +17,11 @@ choix_client = st.selectbox("Choisir un code client", options=df['CODE Client'])
 date_cr = st.date_input("Selectionner la date d'edition du document")
 mois = st.text_input("Entrer le mois de mise en place du ")
 option = st.radio("Option validée par le client", ["Oui", "Non"])
+
+if option = "Oui":
+    doc = docx.Document('edoc_oui.docx')
+else:
+    doc = docx.Document('edoc_non.docx')
 
 #Fonction de generation des variables
 def generate_var():
