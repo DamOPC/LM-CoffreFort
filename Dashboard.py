@@ -18,7 +18,8 @@ date_cr = st.date_input("Selectionner la date d'edition du document")
 mois = st.text_input("Entrer le mois de mise en place du ")
 option = st.radio("Option validée par le client", ["Oui", "Non"])
 
-if option = "Oui":
+if option = 'Oui':
+    st.write("Option 1 validée sur la lettre de mission")
     doc = docx.Document('edoc_oui.docx')
 else:
     doc = docx.Document('edoc_non.docx')
