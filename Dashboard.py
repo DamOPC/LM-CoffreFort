@@ -13,11 +13,11 @@ df = pd.read_excel('AGAuto50.xlsx')
 doc = docx.Document('edoc.docx')
 bio = io.BytesIO()
 
-#Infos utilisateur
+#Infos lettre mission
 choix_client = st.selectbox("Choisir un code client", options=df['CODE Client'])
 date_cr = st.date_input("Selectionner la date d'edition du document")
-capital = st.text_input("Enter le montant du capital")
-montant = st.text_input("Enter le montant de redistribution")
+mois = st.text_input("Entrer le mois de mise en place du ")
+option = st.radio(["Option1", "Option2"))
 
 #Fonction de generation des variables
 def generate_var():
